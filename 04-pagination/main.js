@@ -1,6 +1,4 @@
-const baseURL = "https://swapi.co/api/";
-
-function getData(type, cb) {
+function getData(url, cb) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -9,7 +7,7 @@ function getData(type, cb) {
         }
     };
 
-    xhr.open("GET", baseURL + type + "/");
+    xhr.open("GET", url);
     xhr.send();
 }
 
